@@ -1,9 +1,36 @@
 <!doctype html>
 <html>
     <head>
-        <title>WEB - JavaScript</title>
         <meta charset="utf-8">
-        <script src="color.js"></script>
+        <title>WEB - JavaScript</title>
+        <script>
+            function nightdayhandler(self){
+                var target=document.querySelector('body');
+                if(self.value==='Night'){
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                    self.value='Day';
+
+                    var nightlist=document.querySelectorAll('a');
+                    var i=0;
+                    while(i<nightlist.length){
+                        nightlist[i].style.color='powderblue';
+                        i=i+1;
+                    }
+                } else {
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                    self.value='Night';
+
+                    var daylist=document.querySelectorAll('a');
+                    var i=0;
+                    while(i<daylist.length){
+                        daylist[i].style.color='blue';
+                        i=i+1;
+                    }
+                }   
+            }
+        </script>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
