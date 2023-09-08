@@ -1,0 +1,18 @@
+<script>
+  const month = (new Date()).getMonth() + 1
+
+  if(month === 12 || month <= 2) {
+    alert('Winer')
+  } else {
+    if(3 <= month && month <= 5) {
+      alert('Spring')
+    } else {
+      if(6 <= month && month <= 8) {
+        alert('Summern')
+      } else {
+        alert('Autumn')
+      }
+    }
+    
+  }
+</script>
