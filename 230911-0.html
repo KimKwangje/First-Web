@@ -1,0 +1,24 @@
+<script>
+  // # 배열의 메서드
+  // ## 배열 뒤에 요소 추가하기 : push(요소)
+  const a = [1,2,'wel','come']
+  a.push(3)
+  ->(5) [1, 2, 'wel', 'come', 3]
+  
+  // ## 배열 중간에 요소 추가하기 : splice(인덱스,0,요소)
+  a.splice(1,0,'추가')
+  ->(5) [2, '추가', 'wel', 'come', 3]
+  
+  // ## 인덱스로 배열의 요소 제거하기 : splice(인덱스,1)
+  a.splice(0,1)
+  ->(4) ['추가', 'wel', 'come', 3]
+
+  // ## 배열 내부에서 값의 위치찾기 : indexof(요소)
+  a.indexOf(2)
+  ->1
+
+  // ## 값으로 배열의 요소 제거하기 : index() + splice() 활용
+  const index = a.indexOf('wel')
+  a.splice(index,1)
+  ->(5) [1, 2, 'add', 'come', 3]
+</script>
