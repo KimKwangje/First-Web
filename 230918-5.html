@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.createElement('h2')
+      header.textContent = 'hello'
+      const first = document.querySelector('.first')
+      const second = document.querySelector('.second')
+      const toFirst = () => {
+        first.appendChild(header)
+        setTimeout(toSecond, 1000)
+      }
+      const toSecond = () => {
+        second.appendChild(header)
+        setTimeout(toFirst, 1000)
+      }
+      toFirst()
+    })
+  </script>
+</head>
+<body>
+  <div class="first">
+    <h1>1st</h1>
+  </div>
+  <hr>
+  <div class="second">
+    <h1>2nd</h1>
+  </div>
+</body>
+</html>

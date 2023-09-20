@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMcontentLoaded', () => {
+      //조작
+      const img = document.querySelector('img')
+      //값을 넣는 행위
+      1.img.setAttribute('src', '사이트 주소')
+      2.img.src = '사이트 주소'
+      //값을 추출 행위
+      1.console.log(img.getAttribute('src'))
+      2.console.log(img.src)
+    })
+  </script>
+</head>
+<body>
+  <img src="" alt="" 정보="">
+</body>
+</html>
