@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.querySelector('select')
+      const p = document.querySelector('p')
+
+      select.addEventListener('change', (event) => {
+        const options = event.currentTarget.options
+        const index = options.selectedIndex
+        p.textContent = `select : ${options[index].textContent}`
+      })
+    })
+  </script>
+</head>
+<body>
+  <select>
+    <option value="">떡볶이</option>
+    <option value="">순대</option>
+    <option value="">어묵</option>
+    <option value="">튀김</option>
+  </select>
+  <p>select : 떡볶이</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.querySelector('input')
+      const button = document.querySelector('button')
+      const p = document.querySelector('p')
+
+      button.addEventListener('click', () => {
+        p.textContent = `${Number(input.value) * 2.54}cm`
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="text" name="" id=""> inch<br>
+  <button>변환</button>
+  <p></p>
+</body>
+</html>
